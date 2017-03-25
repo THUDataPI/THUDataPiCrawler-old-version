@@ -9,4 +9,4 @@ CREATE TABLE  `lagou`.`company` (
   `companySize` varchar(20) DEFAULT NULL,
   `Dealed` varchar(5) DEFAULT '0',
   PRIMARY KEY (`companyId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司主表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='鹿芦脣戮脰梅卤铆';
