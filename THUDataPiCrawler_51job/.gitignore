@@ -1,0 +1,9 @@
+# database stored crawled items
+sqlite.db
+
+# log
+*.log
+
+# Byte-compiled
+job/__pycache__/
+job/spiders/__pycache__/
