@@ -32,6 +32,11 @@ class JobPipeline(object):
                     'job_info TEXT,'
                     'company_info TEXT'
                     ')')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS lagou ' \
+                    '(id INTEGER PRIMARY KEY,' \
+                    'url VARCHAR,' \
+                    'company_name VARCHAR'
+                    ')')
         self.count = 0
 
     def process_item(self, item, spider):
@@ -63,6 +68,19 @@ class JobPipeline(object):
                         item['job_tag'],
                         item['job_info'],
                         item['company_info'],))
+                self.connection.commit()
+        elif spider.name == 'lagou':
+            self.cursor.execute("select * from lagou where url=?", (item['url'],))
+            result = self.cursor.fetchone()
+            if result:
+                raise DropItem("Duplicate item found: %s" % item)
+            else:
+                self.cursor.execute(
+                    """INSERT INTO lagou 
+                    (url, company_name) 
+                       VALUES (?,?);""", 
+                       (item['url'], 
+                        item['company_name']))
                 self.connection.commit()
         self.count += 1
         print('%d job info pages parsed' % self.count)

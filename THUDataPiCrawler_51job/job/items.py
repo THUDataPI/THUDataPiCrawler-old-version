@@ -25,7 +25,7 @@ class JobItem(scrapy.Item):
     company_area = scrapy.Field(default='')  # 公司领域
     # department_name = scrapy.Field()  # 部门名称
 
-
+    job_type = scrapy.Field(default='')  # 工作性质： 实习，兼职，全职
     experience_requirement = scrapy.Field(default='')  # 经验要求
     education_requirement = scrapy.Field(default='')  # 学历要求 
     recruiting_number = scrapy.Field(default='')  # 招聘人数
