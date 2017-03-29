@@ -35,23 +35,3 @@ class JobItem(scrapy.Item):
     job_info = scrapy.Field()  # 职位信息
     job_location = scrapy.Field(default='')  # 工作地址
     company_info = scrapy.Field(default='')  # 公司信息
-
-
-class QCWYItem(JobItem):
-    """前程无忧"""
-    pass
-
-
-class LagouItem(JobItem):
-    """拉勾网"""
-    pass    
-        
-
-class ZhipinItem(JobItem):
-    """Boss直聘"""
-    pass
-
-
-class ZLZPItem(JobItem):
-    """智联招聘"""
-    pass
