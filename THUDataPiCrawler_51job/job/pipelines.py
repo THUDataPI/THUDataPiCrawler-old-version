@@ -98,5 +98,5 @@ class JobPipeline(object):
                         item['company_name']))
                 self.connection.commit()
         self.count += 1
-        print('%d job info pages parsed' % self.count)
+        print('Adding %dth position: %s' % (self.count, item['position']))
         return item
