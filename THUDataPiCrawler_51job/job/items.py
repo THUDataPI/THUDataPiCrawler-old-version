@@ -9,49 +9,24 @@ import scrapy
 
 
 class JobItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    url = scrapy.Field()  # 招聘信息链接
-    # 职位基本信息
-    job_position = scrapy.Field(default='')  # 职位
-    city = scrapy.Field(default='')  # 所属城市
-    salary = scrapy.Field(default='')  # 工资
-
-    # 公司基本信息
-    company_name = scrapy.Field(default='')  # 公司名称
-    company_url = scrapy.Field(default='')  # 公司链接
-    company_type = scrapy.Field(default='')  # 公司性质
-    company_size = scrapy.Field(default='')  # 公司规模
-    company_area = scrapy.Field(default='')  # 公司领域
-    # department_name = scrapy.Field()  # 部门名称
-
-
-    experience_requirement = scrapy.Field(default='')  # 经验要求
-    education_requirement = scrapy.Field(default='')  # 学历要求 
-    recruiting_number = scrapy.Field(default='')  # 招聘人数
-    posted_date = scrapy.Field(default='')  # 发布日期
-    job_tag = scrapy.Field(default='')  # 福利等
-
-    job_info = scrapy.Field()  # 职位信息
-    job_location = scrapy.Field(default='')  # 工作地址
-    company_info = scrapy.Field(default='')  # 公司信息
-
-
-class QCWYItem(JobItem):
-    """前程无忧"""
-    pass
-
-
-class LagouItem(JobItem):
-    """拉勾网"""
-    pass    
-        
-
-class ZhipinItem(JobItem):
-    """Boss直聘"""
-    pass
-
-
-class ZLZPItem(JobItem):
-    """智联招聘"""
-    pass
+    position = scrapy.Field()  # 职位名称
+    position_tag = scrapy.Field()  # 职位分类标签
+    department = scrapy.Field()  # 部门名称
+    city = scrapy.Field()  # 工作地点，如：北京-海淀区
+    position_type = scrapy.Field()  # 工作性质，如：全职，兼职
+    experience_requirement = scrapy.Field()  # 经验要求，如：X年经验，X年经验以上
+    education_requirement = scrapy.Field()  # 学历要求 ，如：大专，本科
+    salary = scrapy.Field()  # 工资，如：6000-15000，单位：元/月薪
+    major_requirement = scrapy.Field()  # 专业要求
+    recruiting_number = scrapy.Field()  # 招聘人数，如：3（不确定为-1）
+    position_advantage = scrapy.Field()  # 职位诱惑
+    position_info = scrapy.Field()  # 职位介绍
+    company = scrapy.Field()  # 公司名称
+    company_industry = scrapy.Field()  # 公司行业
+    company_type = scrapy.Field()  # 公司性质
+    company_finance = scrapy.Field()  # 融资阶段
+    company_size = scrapy.Field()  # 公司规模
+    company_url = scrapy.Field()  # 公司主页链接
+    posted_date = scrapy.Field()  # 发布日期，格式：3/21/17
+    posted_website = scrapy.Field()  # 发布网站，如：前程无忧
+    posted_url = scrapy.Field()  # 招聘信息链接

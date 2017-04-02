@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# 用到的库
 scrapy
 
@@ -27,3 +28,6 @@ scrapy 更改下载器middleware，设置代理ip
 http://blog.csdn.net/yelbosh/article/details/21542073
 
 ......
+=======
+
+>>>>>>> 4e588cb9709bada95fed349e965641e08e40efe7

@@ -2,4 +2,4 @@
 
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl THUDataPiCrawler_chinahr -s CLOSESPIDER_ITEMCOUNT=300".split())
+cmdline.execute("scrapy crawl THUDataPiCrawler_chinahr -s CLOSESPIDER_ITEMCOUNT=500".split())
