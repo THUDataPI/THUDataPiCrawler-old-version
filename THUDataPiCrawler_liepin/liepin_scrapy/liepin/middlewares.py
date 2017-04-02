@@ -8,6 +8,7 @@
 from scrapy import signals
 import random
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
+from spiders.utils import *
 
 
 class LiepinMiddleware(object):
@@ -64,9 +65,10 @@ class RotateUserAgentMiddleware(UserAgentMiddleware):
 
     def process_request(self, request, spider):
         ua = random.choice(self.user_agent_list)
+        request.headers = headers
         if ua:
-            print ua, '-----------------yyyyyyyyyyyyyyyyyyyyyyyyy'
-            request.headers.setdefault('User-Agent', ua)
+            print ua
+            request.headers['User-Agent'] = ua
 
     # the default user_agent_list composes chrome,I E,firefox,Mozilla,opera,netscape
     # for more user agent strings,you can find it in http://www.useragentstring.com/pages/useragentstring.php
