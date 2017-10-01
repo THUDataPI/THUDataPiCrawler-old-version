@@ -1,5 +1,3 @@
-[TOC]
-
 # THU 数据派研究部爬虫&可视化组简介
 
 ## THU 数据派（THU DataPi）
